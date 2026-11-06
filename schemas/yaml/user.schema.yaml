@@ -1,0 +1,150 @@
+type: object
+required:
+  - id
+  - firstName
+  - lastName
+  - age
+  - gender
+  - email
+  - username
+  - birthDate
+  - address
+  - company
+  - role
+properties:
+  id:
+    type: integer
+    minimum: 1
+  firstName:
+    type: string
+    minLength: 1
+  lastName:
+    type: string
+    minLength: 1
+  maidenName:
+    type: string
+  age:
+    type: integer
+    minimum: 0
+  gender:
+    type: string
+    enum: [female, male, other]
+  email:
+    type: string
+    format: email
+  phone:
+    type: string
+  username:
+    type: string
+    minLength: 1
+  password:
+    type: string
+  birthDate:
+    type: string
+  image:
+    type: string
+  bloodGroup:
+    type: string
+  height:
+    type: number
+  weight:
+    type: number
+  eyeColor:
+    type: string
+  hair:
+    type: object
+    required:
+      - color
+      - type
+    properties:
+      color:
+        type: string
+      type:
+        type: string
+    additionalProperties: false
+  ip:
+    type: string
+  address:
+    type: object
+    required:
+      - address
+      - city
+      - state
+      - country
+    properties:
+      address:
+        type: string
+      city:
+        type: string
+      state:
+        type: string
+      stateCode:
+        type: string
+      postalCode:
+        type: string
+      coordinates:
+        type: object
+        properties:
+          lat:
+            type: number
+          lng:
+            type: number
+        additionalProperties: false
+      country:
+        type: string
+    additionalProperties: false
+  macAddress:
+    type: string
+  university:
+    type: string
+  bank:
+    type: object
+    properties:
+      cardExpire:
+        type: string
+      cardNumber:
+        type: string
+      cardType:
+        type: string
+      currency:
+        type: string
+      iban:
+        type: string
+    additionalProperties: false
+  company:
+    type: object
+    required:
+      - department
+      - name
+      - title
+    properties:
+      department:
+        type: string
+      name:
+        type: string
+      title:
+        type: string
+      address:
+        type: object
+        additionalProperties: true
+    additionalProperties: false
+  ein:
+    type: string
+  ssn:
+    type: string
+  userAgent:
+    type: string
+  crypto:
+    type: object
+    properties:
+      coin:
+        type: string
+      wallet:
+        type: string
+      network:
+        type: string
+    additionalProperties: false
+  role:
+    type: string
+    enum: [admin, moderator, user]
+additionalProperties: true

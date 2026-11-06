@@ -1,0 +1,25 @@
+{
+  "name": "api-test-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "Maksym Skvortsov",
+  "license": "ISC",
+  "description": "API test framework from scratch in plain JavaScript (ESM) covering REST API testing (only part 1)",
+  "dependencies": {
+    "axios": "^1.21.0",
+    "lodash": "^4.18.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "dotenv": "^18.0.9",
+    "jest": "^30.5.2",
+    "js-yaml": "^5.5.0"
+  }
+}

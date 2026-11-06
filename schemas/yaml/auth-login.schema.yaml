@@ -1,0 +1,39 @@
+type: object
+required:
+  - accessToken
+  - refreshToken
+  - id
+  - username
+  - email
+  - firstName
+  - lastName
+  - gender
+  - image
+properties:
+  accessToken:
+    type: string
+    minLength: 1
+  refreshToken:
+    type: string
+    minLength: 1
+  id:
+    type: integer
+    minimum: 1
+  username:
+    type: string
+    minLength: 1
+  email:
+    type: string
+    format: email
+  firstName:
+    type: string
+    minLength: 1
+  lastName:
+    type: string
+    minLength: 1
+  gender:
+    type: string
+  image:
+    type: string
+    format: uri
+additionalProperties: false
