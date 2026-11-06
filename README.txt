@@ -17,5 +17,7 @@ dummyjson.com — auth simulation, users, pagination
 1. Install
 npm install
 
-2. Run all tests
+2. Add .env file with secrets (one-time link was sent into email)
+
+3. Run all tests
 npm run test
